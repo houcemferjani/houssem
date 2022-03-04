@@ -1,0 +1,13 @@
+<h1> Détails de projet</h1>
+    
+ <div *ngFor ='let us of readDatafpd' id="content" #content>
+          <div>date de commande : {{us.dateC}}</div>
+          <div>Nom du client : {{us.nomC}}</div>
+          <div>Date de lencement : {{us.dateL}}</div>
+          <div>Date de cloture estimé :{{us.dataA}} </div>
+          <div>Date d'écriture de cette fiche : {{us.date}} </div>
+          <div>Prix de projet :{{us.prixP}}</div>
+          <div>zone : {{us.zone}} </div>
+          <div>nombre de O.T : {{us.nbot}} </div>
+        </div>
+        <button (click)="makePDF()" class="btn btn-secondary"> download <i class="fa fa-download" aria-hidden="true"></i> </button>

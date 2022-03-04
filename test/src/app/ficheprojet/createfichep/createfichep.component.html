@@ -1,0 +1,28 @@
+<h1>Ajouter les détalis de votre projet </h1>
+<div class="rr">
+    <div class="login">
+      
+<form [formGroup]="projetForm" >
+   <div><input type="text"  formControlName="nomc"   placeholder="entrez le nom du client " ></div> 
+    <div><select formControlName="typec">
+        <option>Select</option>
+        <option *ngFor='let v of _values1'  >{{ v }}</option>
+      </select></div>
+    <div><input type="date"  formControlName="datec" placeholder="date de commande " ></div>
+    <div><input type="text"  formControlName="typep"   placeholder="Type de projet" ></div>
+    <div><input type="text"  formControlName="codes"   placeholder="Code de site" ></div>
+    <div><input type="text"  formControlName="zone"   placeholder="Zone" ></div>
+    <div><input type="date"  formControlName="datel"   placeholder="date de lancement de projet" ></div>
+    <div><input type="date"  formControlName="datea"   placeholder="date de cloture estimé " ></div>
+    <div><input type="text"  formControlName="typei"   placeholder="type d'intervention" ></div>
+    <div><input type="number"  formControlName="prixp"   placeholder="Prix de projet" > DT</div>
+    <div><input type="number"  formControlName="nbot"   placeholder="nombre des O.T" ></div>
+
+    <div (click)="projetSubmit()">
+        <button>create</button>
+    </div>
+
+</form>
+</div>
+
+</div>

@@ -1,0 +1,33 @@
+
+<div class="container" id="content" #content>
+  <h1>Votre stock</h1>
+  <input type="text" [(ngModel)]="nom" (input)="Search()" placeholder="chercher un materiel "/>
+  
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Réferance</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Edits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor ='let us of readData'>
+            <th scope="row">{{us.id}}</th>
+            <td>{{us.ref}}</td>
+            <td>{{us.nom}}</td>
+            <td>{{us.qte}}</td>
+            <td><button (click)="deleteID(us.id)" class="btn btn-danger" >Delete <i class="fa fa-trash"></i> </button></td>
+      <a [routerLink]="['/createmateriel',us.id]" class="btn btn-warning"> update <i class="fas fa-pencil-alt"></i></a>
+          </tr>
+          
+        </tbody>
+      </table>
+      <button (click)="makePDF()" class="btn btn-secondary"> download <i class="fa fa-download" aria-hidden="true"></i> </button>
+      &nbsp; &nbsp;<a routerLink="/createmateriel" class="btn btn-success"> Ajouter un materiel <i class="fa fa-plus"></i></a>
+    </div>
+  
+  
+ 

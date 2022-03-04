@@ -1,0 +1,25 @@
+<h1>Vos projets</h1>
+<table class="table">
+    <thead>
+      <input type="text" [(ngModel)]="nomC" (input)="Search()" placeholder="chercher un materiel "/>
+<th scope="col">N° du projet</th>
+            <th scope="col">date de commande </th>
+            <th scope="col">Nom du client </th>
+            <th scope="col">Date de lencement </th>
+            <th scope="col">Date de cloture estimé </th>
+            <th scope="col">Prix de projet </th>
+          
+        </thead>
+        <tbody>
+            <tr *ngFor ='let us of readDatafp'>
+              <th scope="row">{{us.num}}</th>
+              <td>{{us.dateC}}</td>
+              <td>{{us.nomC}}</td>
+              <td>{{us.dateL}}</td>
+              <td>{{us.dataA}}</td>
+              <td>{{us.prixP}}</td>
+             <td><a [routerLink]="['/readprojet',us.num]" class="btn btn-warning">détails</a></td>
+            </tr>
+            
+          </tbody>
+    </table>

@@ -1,0 +1,16 @@
+<h1>Ajouter un materiel</h1>
+<div class="rr">
+    <div class="login">
+      
+<form [formGroup]="materielForm" >
+   <div><input type="text"  formControlName="ref"   placeholder="entrez referance" ></div> 
+    <div><input type="text"  formControlName="nom" placeholder="entrez nom" ></div>
+    <div><input type="number"  formControlName="qte" placeholder="entrez quantité" ></div>
+   
+
+<div *ngIf="!getparamid" (click)="materielSubmit()">
+    <button>create</button>
+</div>
+<div *ngIf="getparamid" (click)="materielUpdate()"><button class="btn btn-warning"><i class="fas fa-pencil-alt"></i>update</button></div> 
+
+</form>

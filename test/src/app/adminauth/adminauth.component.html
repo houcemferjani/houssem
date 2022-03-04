@@ -1,0 +1,16 @@
+<body>
+  <div class="rr">
+<div class="login">
+  
+    <img [src]="myimage" alt="gggg" width="120" height="120" class="im">
+    <h1>login</h1>
+    <form #f ="ngForm" (ngSubmit)="onLoggedin()">
+       <p>email</p> 
+        <input type="text" name="email" placeholder="Xyz@gmail.com" class="form-control" [(ngModel)]="admin.email"> 
+        <p>mot de passe</p>
+      <input type="password" name="mdp" placeholder="entrez votre mot de passe" class="form-control" [(ngModel)]="admin.password"> 
+        <input type="submit" value="login" >
+     </form>
+</div>
+</div>
+</body>
